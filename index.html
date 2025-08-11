@@ -1,4 +1,4 @@
-F<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
@@ -54,11 +54,29 @@ F<!DOCTYPE html>
         }
         
         .logo-img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             border: 3px solid #ff6b35;
             object-fit: cover;
+            flex-shrink: 0;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: normal;
         }
         
         .social-links {
@@ -369,48 +387,6 @@ F<!DOCTYPE html>
             margin: 40px 0;
         }
         
-        @media (max-width: 768px) {
-            .social-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .nav {
-                text-align: center;
-            }
-            
-            .logo {
-                justify-content: center;
-                margin-bottom: 15px;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
-        }
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            
-            .nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .emergency-number {
-                font-size: 2rem;
-            }
-            
-            .container {
-                padding: 0 15px;
-            }
-        }
-        
         .testimonials {
             padding: 80px 0;
             background: white;
@@ -492,6 +468,115 @@ F<!DOCTYPE html>
             font-weight: bold;
             margin-bottom: 5px;
         }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .logo {
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+            
+            .logo-img {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .logo-title {
+                font-size: 1.5rem;
+            }
+            
+            .logo-subtitle {
+                font-size: 0.8rem;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .emergency-number {
+                font-size: 2.2rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .services-grid,
+            .features-grid,
+            .testimonials-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .areas-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .whatsapp-float {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-img {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .logo-title {
+                font-size: 1.3rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .emergency-number {
+                font-size: 1.8rem;
+            }
+            
+            .service-card,
+            .contact-card {
+                padding: 25px;
+            }
+            
+            .feature {
+                padding: 20px;
+            }
+            
+            .feature-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -505,14 +590,15 @@ F<!DOCTYPE html>
         <div class="container">
             <nav class="nav">
                 <div class="logo">
-                    <!-- Logo Image -->
-<div style="text-align: center; margin-top: 20px;">
-    <img src="zareefelectrician.png" alt="Zareef Electrician Logo">
-         style="width:100px; height:100px; border-radius:50%; border: 3px solid white;">
-</div>
+                    <img src="zareefelectrician.png" alt="Zareef Electrician Logo" class="logo-img">
+                    <div class="logo-text">
+                        <div class="logo-title">Zareef Electrician</div>
+                        <div class="logo-subtitle">Professional Services</div>
+                    </div>
+                </div>
                     
                 <div class="social-links">
-                    <a href="https://instagram.com/zareef_electrician" target="_blank" class="social-link">
+                    <a href="https://instagram.com/zareefelectrician" target="_blank" class="social-link">
                         📷 Instagram
                     </a>
                     <a href="tel:8394947098" class="emergency-contact">
@@ -691,7 +777,7 @@ F<!DOCTYPE html>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 40px;">
-                <a href="https://instagram.com/zareef_electrician" target="_blank" class="cta-button cta-secondary">
+                <a href="https://instagram.com/zareefelectrician" target="_blank" class="cta-button cta-secondary">
                     📷 Instagram पर और Photos देखें
                 </a>
             </div>
@@ -748,106 +834,4 @@ F<!DOCTYPE html>
                     <div class="contact-icon">💬</div>
                     <h3>WhatsApp</h3>
                     <p><strong>8394947098</strong></p>
-                    <p>Photos भेजकर quick estimate लें</p>
-                    <a href="https://wa.me/918394947098?text=Hi! मुझे electrical service चाहिए" class="cta-button cta-secondary" style="margin-top: 15px;">WhatsApp</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h3>Service Area</h3>
-                    <p><strong>Meerganj, Bareilly</strong></p>
-                    <p>30 KM radius में same day service</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h3>⚡ Zareef Electrician</h3>
-                    <p>Professional House Wiring & Electrical Services</p>
-                    <p>Meerganj, Bareilly - 243001</p>
-                    <div style="margin-top: 15px;">
-                        <a href="https://instagram.com/zareef_electrician" target="_blank" style="color: #ff6b35; text-decoration: none;">
-                            📷 Follow us on Instagram
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3>Services</h3>
-                    <p>House Wiring</p>
-                    <p>Appliance Repair</p>
-                    <p>Emergency Service</p>
-                </div>
-                <div>
-                    <h3>Contact</h3>
-                    <p>📞 8394947098</p>
-                    <p>💬 WhatsApp Available</p>
-                    <p>⏰ 24/7 Emergency</p>
-                </div>
-            </div>
-            <hr style="margin: 20px 0; opacity: 0.3;">
-            <p>&copy; 2025 Zareef Electrician. All Rights Reserved. | Professional Electrical Services in Meerganj, Bareilly</p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for better UX
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Add animation to cards
-        document.querySelectorAll('.service-card, .feature, .testimonial, .contact-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Click tracking for calls and WhatsApp
-        document.querySelectorAll('a[href^="tel:"], a[href^="https://wa.me/"]').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log('Contact link clicked:', this.href);
-                // You can add Google Analytics tracking here
-            });
-        });
-
-        // Emergency pulse animation
-        const emergencyButton = document.querySelector('.emergency-contact');
-        if (emergencyButton) {
-            setInterval(() => {
-                emergencyButton.style.boxShadow = '0 0 20px rgba(255, 107, 53, 0.8)';
-                setTimeout(() => {
-                    emergencyButton.style.boxShadow = '';
-                }, 1000);
-            }, 3000);
-        }
-    </script>
-</body>
-
-</html>
-
-
+                    <p
